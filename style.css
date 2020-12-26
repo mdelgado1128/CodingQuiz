@@ -1,0 +1,36 @@
+.hidden {
+    display: none
+}
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+    text-align: center;
+}
+
+#startBtn {
+    font-size: medium;
+    border-radius: 8px;
+    background-color: blueviolet;
+    color: antiquewhite;
+    cursor: pointer;
+    padding: 10px;
+
+}
+.title {
+    font-size: 50px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.info {
+    font-size: x-large;
+}
+
+.choice {
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 8px;
+    padding:10px
+
+}
