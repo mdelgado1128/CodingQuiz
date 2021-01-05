@@ -7,7 +7,7 @@ var initialsof = document.getElementById("initials");
 var submitBtn = document.getElementById("submitinitial");
 var titleofQuestion = document.getElementById("question-title");
     // var choicesIs = document.getElementById
-
+var score = $("#timer").text(time)
 
 
 var startQuiz = function () {
@@ -76,10 +76,12 @@ var gameover = function () {
     console.log("Game Over!");
     $("#questions").addClass("hidden");
     $("#end-screen").removeClass("hidden");
+    var dispalyTime = $("#final-score")
+    dispalyTime.append(time)
 
 
     clearInterval(timer);
-    var score = $("#timer").text()
+    
 
 
 }
