@@ -14,3 +14,4 @@ How to use:
 This program is a webpage for a coding quiz that dispalys a start page where the user starts the quiz. The button is clicked the webpage will display the fist question and the options of that pertain to the question. Once the user is finished clicking their option the webpage will switch to the next question and choices. When the user has answered all the questions the end game webpage will display where the user will be show end game and their score. The webpage will aslo display a input box where the user will imput their initial. When they push the subit page they will be redirected to the highscores page. On the highscores page the user will see their score and the initails that they inputed. THe page will also have two buttons that will show go back and clear highscores. The buttons will do what they say.
 
 
+/Users/markdelgado/programing/CodingQuiz/Assets/screenshots/Screen Shot 2021-01-05 at 3.08.04 PM.png
