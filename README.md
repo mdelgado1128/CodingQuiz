@@ -1,7 +1,12 @@
 # CodingQuiz
 
 Description:
-The program is a webpage of a COding Quiz. ONce the user clicks the start button they will be show a list of questrions and choices. When they finish the quiz they will input their scores and be redirected to a hishscores page. When on the highscores page the user will have the option to restart or clear their highscores. 
+The program is a webpage of a Coding Quiz. ONce the user clicks the start button they will be show a list of questrions and choices. When they finish the quiz they will input their scores and be redirected to a hishscores page. When on the highscores page the user will have the option to restart or clear their highscores. 
+
+How to use: 
+
+
+
 
 
 
