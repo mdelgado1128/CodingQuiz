@@ -1,4 +1,4 @@
-var time = 100;
+var time = 60;
 var timer;
 // var questions = document.getElementById("questions");
 var currentQuestionIndex = 0;
