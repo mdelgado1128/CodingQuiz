@@ -10,7 +10,8 @@ var printScores = function () {
     scores.forEach(function (score) {
 
         var scoreslist = document.createElement("li");
-        scoreslist.textContent = score.initials
+        scoreslist.textContent = score.initials+ " - " + score.score
+
 
         var orderedlist = document.getElementById("scores");
         orderedlist.appendChild(scoreslist);
