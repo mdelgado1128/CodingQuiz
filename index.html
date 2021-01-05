@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
 
 
 
 </head>
+
 <body>
 
     <div id="timer"></div>
-    <div id = "score"></div>
-    <div id = "start">
-        <h1 class = "title" >Quiz </h1>
-        <p class = "info"> 
+  <div class="viewhighscores"> <a href="highscores.html"> View Highscores </a> </div>
+    <div id="start">  
+        <h1 class="title">Quiz </h1>
+        <p class="info">
             Try to answer the question with the best possible answer.
             The quiz is 4 questions and will be timed.
         </p>
-        <button id = "startBtn"> Start Quiz </button> 
+        <button id="startBtn"> Start Quiz </button>
     </div>
-    <div id = "questions" class = "hidden">
-        <h1 id = "question-title"></h1>
-        <div id = "choices" class="choices"> </div> 
+    <div id="questions" class="hidden">
+        <h1 id="question-title"></h1>
+        <div id="choices" class="choices"> </div>
     </div>
 
-    <div id="end-screen" class = "hidden">
+    <div id="correct" class="hidden">
+        Correct!
+    </div>
+
+    <div id="wrong" class="hidden">
+        Wrong!
+    </div>
+
+    <div id="end-screen" class="hidden">
         <h1>You have finished!</h1>
-            <p> Your final score is <span id= "final-score"></span>.</p>
-            <p> submit initials <input type="text" id = "initials"/> <button id ="submitinitial"> submit </button> </p>
-    </div>
-    <div id="highscore" class = "hidden">
-        <h1> Scores </h1>
-        <div id="scores"></div>
+        <p> Your final score is <span id="final-score"></span>.</p>
+        <p> submit initials <input type="text" id="initials" /> <button id="submitinitial"> submit </button> </p>
     </div>
 
-    <div id = "end"></div>
-    <div id = "feedback"></div>
+    <div id="restart" class="hidden">
+    </div>
+
+    <div id="end"></div>
+    <div id="feedback"></div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="main.js"></script>
     <script src="question.js"></script>
 </body>
+
 </html>

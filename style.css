@@ -18,6 +18,11 @@ body {
     padding: 10px;
 
 }
+.viewhighscores {
+text-align: left;
+position: absolute;
+}
+
 .title {
     font-size: 50px;
     font-family: 'Noto Sans TC', sans-serif;
@@ -31,6 +36,37 @@ body {
     background-color: blueviolet;
     color: white;
     border-radius: 8px;
-    padding:10px
+    padding:10px;
+
 
 }
+
+#submitinitial {
+    background-color: blueviolet;
+    color: white;
+    border-radius: 8px;
+    padding:5px;
+
+}
+
+#timer {
+    text-align: right;
+
+}
+
+
+ol {
+    padding-left: 0px;
+    max-height: 400px;
+    overflow: auto;
+  }
+  
+  li {
+    padding: 5px;
+    list-style: decimal inside none;
+  }
+  
+  li:nth-child(odd) {
+    background-color: #f3edfc;
+  }
+  

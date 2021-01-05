@@ -3,7 +3,10 @@ var timer;
 // var questions = document.getElementById("questions");
 var currentQuestionIndex = 0;
 var choiceof = document.getElementById("choices");
-// var choicesIs = document.getElementById
+var initialsof = document.getElementById("initials");
+var submitBtn = document.getElementById("submitinitial");
+var titleofQuestion = document.getElementById("question-title");
+    // var choicesIs = document.getElementById
 
 
 
@@ -13,6 +16,7 @@ var startQuiz = function () {
     timer = setInterval(timerFunc, 1000)
     $("#timer").text(time)
     startQuestions()
+
 }
 
 var timerFunc = function () {
@@ -25,7 +29,7 @@ var timerFunc = function () {
 
 var startQuestions = function () {
     var currentquestion = questions[currentQuestionIndex];
-    var titleofQuestion = document.getElementById("question-title");
+
     titleofQuestion.textContent = currentquestion.title;
 
     choiceof.innerHTML = "";
@@ -38,9 +42,9 @@ var startQuestions = function () {
 
         choiceIs.textContent = i + 1 + ". " + choice;
 
-        choiceIs.onclick = questionClick 
-            
-    
+        choiceIs.onclick = questionClick
+
+
 
         choiceof.appendChild(choiceIs);
 
@@ -51,51 +55,99 @@ var startQuestions = function () {
 };
 
 function questionClick() {
-var userChoice = event.target.value;
-var currentquestion = questions[currentQuestionIndex];
-var answer = currentquestion.answer
+    var userChoice = event.target.value;
+    var currentquestion = questions[currentQuestionIndex];
+    var answer = currentquestion.answer
 
-if (userChoice !== answer) {
-    time = time - 10 
-    $("#timer").text(time)
+    if (userChoice !== answer) {
+        time = time - 10
+        $("#timer").text(time)
+    };
+    if (currentQuestionIndex < questions.length - 1) {
 
-
-};
-if (currentQuestionIndex < questions.length -1 ) {
-
-currentQuestionIndex ++ 
-startQuestions()
-
-
+        currentQuestionIndex++
+        startQuestions()
+    }
+    else {
+        gameover()
+    }
 }
-else {
-gameover()
-}
+var gameover = function () {
+    console.log("Game Over!");
+    $("#questions").addClass("hidden");
+    $("#end-screen").removeClass("hidden");
 
 
-}
-var gameover = function() {
-console.log("Game Over!");
-$("#questions").addClass("hidden");
-$("#end-screen").removeClass("hidden");
-
-clearInterval(timer);
-var score = $("#timer").text()
-
-
-}
-
-var highScore = function(){
+    clearInterval(timer);
     var score = $("#timer").text()
-    $("#end-screen").addClass("hidden");
-$("#highscore").removeClass("hidden");
-var initials = $("#initials")
 
 
 }
+
+var saved = function () {
+    // var score = $("#timer").text()
+    // // $("#end-screen").addClass("hidden");
+    // // $("#highscore").removeClass("hidden");
+     var initials = initialsof.value.trim();
+
+
+    if (initials !== "") {
+        var scores = 
+        JSON.parse(window.localStorage.getItem("scores")) || [];
+        var newScore = {
+            score: time,
+            initials: initials
+        };
+
+        scores.push(newScore);
+        window.localStorage.setItem("scores", JSON.stringify(scores));
+        window.location.href = "highscores.html";
+        
+
+      }
+
+
+
+}
+function checkForEnter(event) {
+    // "13" represents the enter key
+    if (event.key === "Enter") {
+      saved();
+    }
+  }
+
 
 $("#startBtn").click(startQuiz);
-$("#submitinitials").click(highScore);
+submitBtn.onclick = saved;
+initialsof.onkeyup = checkForEnter;
+
+
+
+// var printScores = function (){
+// var scores = JSON.parse(window.localStorage.getItem("scores")) || [];
+// scores.forEach(function(score){
+
+// var scoreslist = document.getElementById("li");
+// scoreslist.textContent = score.initials + "-" + score.score;
+
+// var orderedlist = document.getElementById("scores");
+// orderedlist.appendChild(scoreslist);
+
+// });
+
+// }
+
+// var clearscores = function () {
+//     window.localStorage.removeItem("scores");
+//     window.location.reload();
+//   }
+  
+
+
+
+
+
+
 
 // put score and initials inside the div inside of highscores 
 //  add restart btn
