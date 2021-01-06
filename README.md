@@ -16,5 +16,5 @@ Once the user is on the highscores page they will see their initials and score. 
 
 
 
-![Start Page](https://octodex.github.com/images/yaktocat.png)
+![Start Page](./Assest/startpage.png)
 
