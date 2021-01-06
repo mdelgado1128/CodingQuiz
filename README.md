@@ -12,9 +12,16 @@ When the user clicks a choice the next question will appear.
 
 After the user finishes all the questions the finsih webpage will appear wher it will display the users score and an input area and a submit button. The input area will be for the user to input there initial. Once the users initial is inputed and they click on the submit button they will be redirected to a highscores page. 
 
-Once the user is on the highscores page they will see their initials and score. On this page the user will also see two buttons. A reset button and a clear highscores button which. The reset button will restart the quiz and the clear highscores button will clear the highscores from the webpage and local storage. 
-
+Once the user is on the highscores page they will see their initials and score. On this page the user will also see two buttons. A reset button and a clear highscores button which. The reset button will restart the quiz and the clear highscores button will clear the highscores from the webpage and local storage.
 
 
 ![Start Page](./Assets/startpage.png)
+
+
+Heres a link to the deployed application:
+
+https://mdelgado1128.github.io/CodingQuiz/
+
+
+
 
